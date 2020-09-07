@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 clap = "2.33.3"
-pete-core = "0.1.0"
+pete-core = {"git" = "https://github.com/pete-tpl/pete-core.git", "version" = "0.1.0"}

@@ -69,8 +69,9 @@ impl Args {
                 return Err(Error::create(format!("The parameter '{}' is not a KEY=VALUE pair", param)));
             }
             let pos = pos.unwrap();
-            //args.params.insert(param[0..pos].to_string(), param[pos+1..param.len()].to_string());
-            args.params.insert(param[0..pos].to_string(), Parameter::new());
+            let mut parameter = Parameter::new();
+            parameter.set_string_value(param[pos+1..param.len()].to_string());
+            args.params.insert(param[0..pos].to_string(), parameter);
         }
     
         Ok(args)

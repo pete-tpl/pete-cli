@@ -67,8 +67,7 @@ dependencies = [
 [[package]]
 name = "pete-core"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fec2a2f6e5bd0d547ff0dfb9a5408b9d1fc4d4f7c30f9544c9dcef5c4dc81abb"
+source = "git+https://github.com/pete-tpl/pete-core.git#4a4a8919b4d5badee92318aeab01c6422a836258"
 
 [[package]]
 name = "strsim"
