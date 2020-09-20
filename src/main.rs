@@ -9,10 +9,10 @@ fn main() -> Result<(), error::Error> {
     let engine = Engine::new();
     let args = Args::create_from_cli()?;
     match engine.render(args.template, args.params) {
-        RenderResult::Ok(output_string) => {
+        Ok(output_string) => {
             print!("{}", output_string);
         },
-        RenderResult::TemplateError(error) => {
+        Err(error) => {
             println!("Failed to render the template:\n{}", error);
         }
     }
