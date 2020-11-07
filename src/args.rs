@@ -3,13 +3,13 @@ use std::io::{self, Read};
 
 use clap::{Arg, App};
 
-use pete_core::parameter::{Parameter, ParameterStore};
+use pete_core::common::variable::{Variable, VariableStore};
 
 use crate::error::Error;
 
 pub struct Args {
     pub debug_blocks: bool,
-    pub params: ParameterStore,
+    pub params: VariableStore,
     pub template: String,
 }
 
@@ -17,7 +17,7 @@ impl Args {
     pub fn create() -> Args {
         Args {
             debug_blocks: false,
-            params: ParameterStore::new(),
+            params: VariableStore::new(),
             template: String::new(),
         }
     }
@@ -69,7 +69,7 @@ impl Args {
                 return Err(Error::create(format!("The parameter '{}' is not a KEY=VALUE pair", param)));
             }
             let pos = pos.unwrap();
-            let mut parameter = Parameter::new();
+            let mut parameter = Variable::new();
             parameter.set_string_value(param[pos+1..param.len()].to_string());
             args.params.insert(param[0..pos].to_string(), parameter);
         }

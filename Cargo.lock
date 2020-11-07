@@ -67,7 +67,7 @@ dependencies = [
 [[package]]
 name = "pete-core"
 version = "0.1.0"
-source = "git+https://github.com/pete-tpl/pete-core.git#28eaed14b8b26fef96eade451e22499d2217e639"
+source = "git+https://github.com/pete-tpl/pete-core.git#f0b1bbf690038aaa2d4d459434990704c6b3dcf4"
 
 [[package]]
 name = "strsim"

@@ -3,7 +3,7 @@ mod error;
 
 use args::Args;
 
-use pete_core::engine::{Engine, RenderResult};
+use pete_core::engine::{Engine};
 
 fn main() -> Result<(), error::Error> {
     let engine = Engine::new();
